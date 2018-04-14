@@ -3,10 +3,8 @@
   "version": "0.1.0",
   "description": "A simple discord bot",
   "main": "MusicBot.js",
-   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node MusicBot.js"
-    
+  "scripts": {
+    "test": ""
   },
   "keywords": [
     "discord",

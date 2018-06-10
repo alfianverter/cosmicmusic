@@ -64,10 +64,10 @@ client.on('message', async msg => { // eslint-disable-line
 					var videos = await youtube.searchVideos(searchString, 10);
 					let index = 0;
 					var embed = new Discord.RichEmbed()
-                                .setTitle("🎺 Song Selection 🎻 ")
+                                .setTitle("🎧 pilih music yang lu mau yang enak yang mantep haha 🎧 ")
                                 .setDescription(`${videos.map(video2 => `**${++index}** \`${video2.title}\` `).join('\n')}`)
 	                        .setColor("RANDOM")
-                                .setFooter("Please provide a value to select one of the search results ranging from 1-10.")
+                                .setFooter("pilihnya 1 sampe 10 ae jangan berlebihan wkwkwk")
 
                                  msg.channel.send(embed).then(msg => {msg.delete(10000)});
 					// eslint-disable-next-line max-depth
@@ -85,14 +85,14 @@ client.on('message', async msg => { // eslint-disable-line
 					var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
 				} catch (err) {
 					console.error(err);
-					return msg.channel.send('🆘 I could not obtain any search results.');
+					return msg.channel.send('🆘 Saya tidak dapat memperoleh hasil pencarian apa pun.');
 				}
 			}
 			return handleVideo(video, msg, voiceChannel);
 		}
 	} else if (command === 'p') {
 		const voiceChannel = msg.member.voiceChannel;
-		if (!voiceChannel) return msg.channel.send('I\'m sorry but you need to be in a voice channel to play music!');
+		if (!voiceChannel) return msg.channel.send('I\'m maaf tetapi Anda harus berada di saluran suara untuk memutar musik!');
 		const permissions = voiceChannel.permissionsFor(msg.client.user);
 		if (!permissions.has('CONNECT')) {
 			return msg.channel.send('I cannot connect to your voice channel, make sure I have the proper permissions!');
@@ -117,10 +117,10 @@ client.on('message', async msg => { // eslint-disable-line
 					var videos = await youtube.searchVideos(searchString, 10);
 					let index = 0;
 					var embed = new Discord.RichEmbed()
-                                .setTitle("🎺 Song Selection 🎻")
+                                .setTitle("🎧 Pilih Music yang lu mau bray :V 🎧")
                                 .setDescription(`${videos.map(video2 => `**${++index}** \`${video2.title}\` `).join('\n')}`)
 	                        .setColor("RANDOM")
-                                .setFooter("Please provide a value to select one of the search results ranging from 1-10.")
+                                .setFooter("pilihnya 1 sampe 10 ae jangan berlebihan wkwkwk")
 
                                  msg.channel.send(embed).then(msg => {msg.delete(10000)});
 					// eslint-disable-next-line max-depth

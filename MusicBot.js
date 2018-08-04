@@ -279,7 +279,7 @@ client.on("ready", async () => {
     function randomStatus() {
         let status = [`📯 Music Bot | gm.play`,]
           let rstatus = Math.floor(Math.random() * status.length);
-        music.user.setActivity(status[rstatus], {type: 'STREAMING', url: "https://www.twitch.tv/verterid"});
+        client.user.setActivity(status[rstatus], {type: 'STREAMING', url: "https://www.twitch.tv/verterid"});
     }; setInterval(randomStatus, 20000)
 });
 client.login(process.env.BOT_TOKEN);

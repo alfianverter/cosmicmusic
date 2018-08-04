@@ -274,7 +274,7 @@ function play(guild, song) {
                   
 }
 
-bot.on("ready", async () => {
+client.on("ready", async () => {
 
     function randomStatus() {
         let status = [`📯 Music Bot | gm.play`,]

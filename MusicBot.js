@@ -18,11 +18,6 @@ client.on('warn', console.warn);
 client.on('error', console.error);
 
 client.on('ready', () => console.log(`${client.user.tag} Yo this ready!`));
-    function randomStatus() {
-        let status = [`📯 Music Bot | gm.play`,]
-          let rstatus = Math.floor(Math.random() * status.length);
-        music.user.setActivity(status[rstatus], {type: 'STREAMING', url: "https://www.twitch.tv/verterid"});
-    }; setInterval(randomStatus, 20000)
 
 client.on('disconnect', () => console.log('I just disconnected, making sure you know, I will reconnect now...'));
 
@@ -279,4 +274,12 @@ function play(guild, song) {
                   
 }
 
+bot.on("ready", async () => {
+
+    function randomStatus() {
+        let status = [`📯 Music Bot | gm.play`,]
+          let rstatus = Math.floor(Math.random() * status.length);
+        music.user.setActivity(status[rstatus], {type: 'STREAMING', url: "https://www.twitch.tv/verterid"});
+    }; setInterval(randomStatus, 20000)
+});
 client.login(process.env.BOT_TOKEN);
